@@ -8,7 +8,7 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 //import org.json.JSONStringer;
 //@WebServlet("/TestServlet")
-public class TestServlet extends HttpServlet{
+public class login_Serverlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         this.doPost(req, resp);
@@ -17,10 +17,9 @@ public class TestServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");
-        String name = req.getParameter("name");
+        String name = req.getParameter("email");
         String password = req.getParameter("password");
-        String account = req.getParameter("account");
-        System.out.println(name+password+account);
-        resp.sendRedirect("DeviceManage.html");
+
+        resp.sendRedirect("projects.html");
     }
 }
